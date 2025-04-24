@@ -135,7 +135,7 @@ res.status(200).json({
     
 }
     catch (error) {
-        console.log(error);
+      next(error)
     }
     
 }
@@ -181,7 +181,7 @@ const getAllUsers = async (req, res) => {
 
 
 const getUserById = async (req, res) => {
-    const Add = await userModel.findById("90786")
+    const Add = await userModel.findById(req.params.id)
     if (!Add) {
            res.status(400).json({
             status: "error",
