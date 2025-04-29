@@ -10,7 +10,7 @@ userRouter.route("/sign-in").post(signIn)
 userRouter.route("/logout").post(isLognedIn, logOut)
 userRouter.route("/verify-email").post(verifyEmail); 
 
-userRouter.route("/single/:id").get(  getUserById).delete( isAdmin, getUserByIdAndDelete).patch(updateUser)
+userRouter.route("/single/:id").get(  getUserById).delete( isAdmin, getUserByIdAndDelete).patch( updateUser)
 
 
 
